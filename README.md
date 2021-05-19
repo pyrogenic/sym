@@ -1,0 +1,2 @@
+# sym
+Synthetic Monorepo

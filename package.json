@@ -1,0 +1,7 @@
+{
+  "name": "sym",
+  "license": "NONE",
+  "workspaces": [
+    "packages/*"
+  ]
+}

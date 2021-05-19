@@ -1,0 +1,8 @@
+[submodule "packages/elephant"]
+	path = packages/elephant
+	url = git@github.com:pyrogenic/elephant.git
+	branch = main
+[submodule "packages/discojs"]
+	path = packages/discojs
+	url = git@github.com:pyrogenic/discojs.git
+	branch = pagination

@@ -1,6 +1,9 @@
 {
   "name": "sym",
-  "license": "NONE",
+  "private": true,
+  "scripts": {
+    "elephant": "yarn workspace @pyrogenic/elephant"
+  },
   "workspaces": [
     "packages/*"
   ]

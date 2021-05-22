@@ -2,5 +2,12 @@
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
-  }
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "eslint.format.enable": true,
+  "eslint.codeActionsOnSave.mode": "all",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file"
 }

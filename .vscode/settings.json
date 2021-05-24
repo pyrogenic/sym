@@ -9,5 +9,12 @@
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.mode": "all",
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file"
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ]
 }

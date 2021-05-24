@@ -6,3 +6,6 @@
 	path = packages/discojs
 	url = git@github.com:pyrogenic/discojs.git
 	branch = pagination
+[submodule "memo"]
+	path = packages/memo
+	url = git@github.com:pyrogenic/memo.git

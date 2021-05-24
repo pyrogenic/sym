@@ -2,7 +2,8 @@
   "name": "sym",
   "private": true,
   "scripts": {
-    "elephant": "yarn workspace @pyrogenic/elephant"
+    "elephant": "yarn workspace @pyrogenic/elephant",
+    "memo": "yarn workspace @pyrogenic/memo"
   },
   "workspaces": [
     "packages/*"

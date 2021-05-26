@@ -5,6 +5,21 @@
             "name": "http://localhost:3000/elephant",
             "request": "launch",
             "url": "http://localhost:3000/elephant"
+        },
+        {
+            "type": "node",
+            "name": "vscode-jest-tests",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "yarn",
+            "args": [
+                "jest",
+                "--runInBand",
+                "--watchAll=false"
+            ]
         }
     ]
 }

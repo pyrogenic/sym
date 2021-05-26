@@ -16,5 +16,6 @@
   "eslint.validate": [
     "javascript",
     "typescript"
-  ]
+  ],
+  "jest.jestCommandLine": "yarn jest"
 }

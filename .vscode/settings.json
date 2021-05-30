@@ -17,5 +17,6 @@
     "javascript",
     "typescript"
   ],
-  "jest.jestCommandLine": "yarn jest"
+  "jest.jestCommandLine": "yarn jest",
+  "testing.autoRun.mode": "rerun",
 }

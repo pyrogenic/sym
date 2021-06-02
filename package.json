@@ -2,10 +2,13 @@
   "name": "sym",
   "private": true,
   "scripts": {
+    "asset": "yarn workspace @pyrogenic/elephant",
     "discojs": "yarn workspace discojs",
     "elephant": "yarn workspace @pyrogenic/elephant",
     "memo": "yarn workspace @pyrogenic/memo",
-    "start": "npm-run-all --parallel 'memo watch' 'discojs build-dev --watch' 'elephant start'"
+    "perl": "yarn workspace @pyrogenic/perl",
+    "spelling-sea": "yarn workspace @pyrogenic/spelling-sea",
+    "start": "npm-run-all --parallel 'asset watch' 'memo watch' 'perl watch' 'discojs build-dev --watch'"
   },
   "dependencies": {
     "npm-run-all": "~4.1.5"

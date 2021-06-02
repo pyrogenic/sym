@@ -1,11 +1,28 @@
 [submodule "packages/elephant"]
-	path = packages/elephant
-	url = git@github.com:pyrogenic/elephant.git
-	branch = main
+path = packages/elephant
+url = git@github.com:pyrogenic/elephant.git
+branch = main
 [submodule "packages/discojs"]
-	path = packages/discojs
-	url = git@github.com:pyrogenic/discojs.git
-	branch = pagination
+path = packages/discojs
+url = git@github.com:pyrogenic/discojs.git
+branch = pagination
 [submodule "memo"]
-	path = packages/memo
-	url = git@github.com:pyrogenic/memo.git
+path = packages/memo
+url = git@github.com:pyrogenic/memo.git
+branch = main
+[submodule "packages/toed"]
+path = packages/toed
+url = git@github.com:pyrogenic/toed.git
+branch = main
+[submodule "packages/asset"]
+path = packages/asset
+url = git@github.com:pyrogenic/asset.git
+branch = main
+[submodule "packages/spelling-sea"]
+path = packages/spelling-sea
+url = git@github.com:pyrogenic/spelling-sea.git
+branch = main
+[submodule "packages/perl"]
+path = packages/perl
+url = git@github.com:pyrogenic/perl
+branch = main

@@ -19,4 +19,12 @@
   ],
   "jest.jestCommandLine": "yarn jest",
   "testing.autoRun.mode": "rerun",
+  "ruby.useLanguageServer": true,
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.format": "rubocop",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.lint": {
+    "rubocop": true,
+  },
+  "ruby.useBundler": true,
 }

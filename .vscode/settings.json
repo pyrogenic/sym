@@ -27,4 +27,5 @@
     "rubocop": true,
   },
   "ruby.useBundler": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
 }

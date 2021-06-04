@@ -26,3 +26,10 @@ branch = main
 path = packages/perl
 url = git@github.com:pyrogenic/perl
 branch = main
+[submodule "packages/bootstrap"]
+path = packages/bootstrap
+url = git@github.com:pyrogenic/bootstrap.git
+branch = sym-tweaks
+[submodule "packages/testbed"]
+	path = packages/testbed
+	url = git@github.com:pyrogenic/testbed.git

@@ -16,9 +16,10 @@
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "yarn",
             "args": [
-                "jest",
-                "--runInBand",
-                "--watchAll=false"
+                "workspace",
+                "@pyrogenic/asset",
+                "test",
+                "--watch",
             ]
         }
     ]

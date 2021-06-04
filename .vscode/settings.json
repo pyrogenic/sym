@@ -9,7 +9,7 @@
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.mode": "all",
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSaveMode": "modifications",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },

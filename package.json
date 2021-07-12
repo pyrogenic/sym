@@ -10,7 +10,7 @@
     "spelling-sea": "yarn workspace @pyrogenic/spelling-sea",
     "testbed": "yarn workspace @pyrogenic/testbed",
     "toed": "yarn workspace @pyrogenic/toed",
-    "start": "npm-run-all --parallel 'asset watch' 'memo watch' 'perl watch' 'discojs build-dev --watch'"
+    "start": "npm-run-all --parallel 'asset watch' 'memo watch' 'perl watch'"
   },
   "dependencies": {
     "npm-run-all": "~4.1.5"

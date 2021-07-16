@@ -33,3 +33,6 @@ branch = sym-tweaks
 [submodule "packages/testbed"]
 	path = packages/testbed
 	url = git@github.com:pyrogenic/testbed.git
+[submodule "packages/jsonpath"]
+	path = packages/jsonpath
+	url = git@github.com:pyrogenic/jsonpath.git

@@ -1,8 +1,8 @@
-[submodule "packages/elephant"]
+[submodule "elephant"]
 	path = packages/elephant
 	url = git@github.com:pyrogenic/elephant.git
 	branch = main
-[submodule "packages/discojs"]
+[submodule "discojs"]
 	path = packages/discojs
 	url = git@github.com:pyrogenic/discojs.git
 	branch = pagination
@@ -10,31 +10,31 @@
 	path = packages/memo
 	url = git@github.com:pyrogenic/memo.git
 	branch = main
-[submodule "packages/toed"]
+[submodule "toed"]
 	path = packages/toed
 	url = git@github.com:pyrogenic/toed.git
 	branch = main
-[submodule "packages/asset"]
+[submodule "asset"]
 	path = packages/asset
 	url = git@github.com:pyrogenic/asset.git
 	branch = main
-[submodule "packages/spelling-sea"]
+[submodule "spelling-sea"]
 	path = packages/spelling-sea
 	url = git@github.com:pyrogenic/spelling-sea.git
 	branch = main
-[submodule "packages/perl"]
+[submodule "perl"]
 	path = packages/perl
 	url = git@github.com:pyrogenic/perl
 	branch = main
-[submodule "packages/bootstrap"]
+[submodule "bootstrap"]
 	path = packages/bootstrap
 	url = git@github.com:pyrogenic/bootstrap.git
 	branch = sym-tweaks
-[submodule "packages/testbed"]
+[submodule "testbed"]
 	path = packages/testbed
 	url = git@github.com:pyrogenic/testbed.git
 	branch = main
-[submodule "packages/jsonpath"]
+[submodule "jsonpath"]
 	path = packages/jsonpath
 	url = git@github.com:pyrogenic/jsonpath.git
 	branch = main

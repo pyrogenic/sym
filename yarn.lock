@@ -6074,6 +6074,13 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+cytoscape-cola@~2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/cytoscape-cola/-/cytoscape-cola-2.5.0.tgz#7365d9dfc1a577dd068232093f2f00147c0c0155"
+  integrity sha512-TCpzO+e7H7Bhi2uiAi2Nq7gFwcSGkffe1J6uQ7Dsx6SLN9OhIzrQkBkV6m8kHzar+flVbP76RwxAa2y97jdphA==
+  dependencies:
+    webcola "^3.4.0"
+
 cytoscape@~3.14.0:
   version "3.14.4"
   resolved "https://registry.yarnpkg.com/cytoscape/-/cytoscape-3.14.4.tgz#ea3864003d000e10128125a613ec3ec9b455126e"
@@ -16283,7 +16290,7 @@ web-vitals@~1.1.2:
   resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
   integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
 
-webcola@~3.4.0:
+webcola@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/webcola/-/webcola-3.4.0.tgz#490d26ae98e5b5109478b94a846a62ff6831a99d"
   integrity sha512-4BiLXjXw3SJHo3Xd+rF+7fyClT6n7I+AR6TkBqyQ4kTsePSAMDLRCXY1f3B/kXJeP9tYn4G1TblxTO+jAt0gaw==

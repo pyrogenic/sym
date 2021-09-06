@@ -9181,7 +9181,7 @@ ip-regex@^2.1.0:
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
   integrity sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk=
 
-ip@^1.1.0, ip@^1.1.5:
+ip@^1.1.0, ip@^1.1.3, ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
   integrity sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
@@ -11476,6 +11476,26 @@ node-releases@^1.1.61, node-releases@^1.1.71:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.72.tgz#14802ab6b1039a79a0c7d662b610a5bbd76eacbe"
   integrity sha512-LLUo+PpH3dU6XizX3iVoubUNheF/owjXCZZ5yACDxNnPtgFuludV1ZL3ayK1kVep42Rmm0+R9/Y60NQbZ2bifw==
 
+"node-roon-api-browse@github:roonlabs/node-roon-api-browse":
+  version "1.0.0"
+  resolved "https://codeload.github.com/roonlabs/node-roon-api-browse/tar.gz/98adcbaba3a30fd6ce109c1f04cd361536143222"
+
+"node-roon-api-status@github:roonlabs/node-roon-api-status":
+  version "1.0.0"
+  resolved "https://codeload.github.com/roonlabs/node-roon-api-status/tar.gz/504c918d6da267e03fbb4337befa71ca3d3c7526"
+
+"node-roon-api-transport@github:roonlabs/node-roon-api-transport":
+  version "2.0.1"
+  resolved "https://codeload.github.com/roonlabs/node-roon-api-transport/tar.gz/2ee60008a4cdb90c34ff3de58bb4b949067f1d20"
+
+"node-roon-api@github:roonlabs/node-roon-api":
+  version "1.2.2"
+  resolved "https://codeload.github.com/roonlabs/node-roon-api/tar.gz/b09c875738360a9413518a8a51ac70294745a926"
+  dependencies:
+    ip "^1.1.3"
+    node-uuid "^1.4.7"
+    ws ">=3.3.1"
+
 node-sass@~6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-6.0.0.tgz#f30da3e858ad47bfd138bc0e0c6f924ed2f734af"
@@ -11497,6 +11517,11 @@ node-sass@~6.0.0:
     sass-graph "2.2.5"
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
+
+node-uuid@^1.4.7:
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
+  integrity sha1-sEDrCSOWivq/jTL7HxfxFn/auQc=
 
 nomnom@1.5.2:
   version "1.5.2"
@@ -16738,6 +16763,11 @@ write-file-atomic@^3.0.0:
     is-typedarray "^1.0.0"
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
+
+ws@>=3.3.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.2.1.tgz#bdd92b3c56fdb47d2379b5ae534281922cc5bd12"
+  integrity sha512-XkgWpJU3sHU7gX8f13NqTn6KQ85bd1WU7noBHTT8fSohx7OS1TPY8k+cyRPCzFkia7C4mM229yeHr1qK9sM4JQ==
 
 ws@^6.2.1:
   version "6.2.1"

@@ -10356,6 +10356,11 @@ jshint@2.6.0:
     strip-json-comments "1.0.x"
     underscore "1.6.x"
 
+json-diff-ts@~1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/json-diff-ts/-/json-diff-ts-1.2.4.tgz#f35fbc156ff3c1fd38ed32522f176fd30daf9cf5"
+  integrity sha512-5FkCsWWp5ynBTlt2KCRNhP4SreYqQLUrBywikl5ELQNMjsKIXritWGf2+kbZY2QXSVuv8s1shtyxBHkGf14qCQ==
+
 json-parse-better-errors@^1.0.1, json-parse-better-errors@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"

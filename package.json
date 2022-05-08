@@ -2,7 +2,7 @@
   "name": "sym",
   "private": true,
   "scripts": {
-    "asset": "yarn workspace @pyrogenic/elephant",
+    "asset": "yarn workspace @pyrogenic/asset",
     "discojs": "yarn workspace discojs",
     "elephant": "yarn workspace @pyrogenic/elephant",
     "memo": "yarn workspace @pyrogenic/memo",

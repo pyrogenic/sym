@@ -38,3 +38,6 @@
 	path = packages/jsonpath
 	url = git@github.com:pyrogenic/jsonpath.git
 	branch = main
+[submodule "packages/proon"]
+	path = packages/proon
+	url = git@github.com:pyrogenic/proon.git

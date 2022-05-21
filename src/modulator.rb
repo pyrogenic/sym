@@ -1,28 +1,36 @@
-mods = []
-mod = nil
-File.readlines('.gitmodules').each do |line|
+# frozen_string_literal: true
+
+MODS = begin
+  mods = []
+  mod = nil
+  File.readlines('.gitmodules').each do |line|
     case line
-    when /\[submodule "([^"]+)"\]/
-        mods << mod if mod
-        mod = {name: $1}
-    when /(\w+) = (.*)/
-        mod[$1.to_sym] = $2
+    when /\[submodule "(?<name>[^"]+)"\]/
+      mods << mod if mod
+      mod = { name: Regexp.last_match[:name] }
+    when /(?<prop>\w+) = (?<value>.*)/
+      mod[Regexp.last_match[:prop].to_sym] = Regexp.last_match[:value]
     end
+  end
+  mods << mod if mod
+  mods
 end
-mods << mod if mod
 
 def act(mod, cmd)
-    Dir.chdir(mod[:path]) do
-        puts("[#{mod[:name]}] $ #{cmd}")
-        r = `#{cmd}`
-        puts(r)
-        r
-    end
-rescue => e
-    warn(e)
+  Dir.chdir(mod[:path]) do
+    puts("[#{mod[:name]}] $ #{cmd}")
+    r = `#{cmd}`
+    puts(r)
+    r
+  end
+rescue StandardError => e
+  warn(e)
 end
 
-mods.each do |mod|
-    next unless mod[:branch]
-    act(mod, "git checkout #{mod[:branch]}")
+MODS.each do |mod|
+  next unless mod[:branch]
+
+  act(mod, "git checkout #{mod[:branch]}")
 end
+
+# TODO: Dependency order to execute things like tsc

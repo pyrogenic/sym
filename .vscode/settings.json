@@ -29,4 +29,7 @@
   "ruby.useBundler": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "autoimport.doubleQuotes": true,
+  "tslint.packageManager": "yarn",
+  "tslint.alwaysShowRuleFailuresAsWarnings": false,
+  "explorer.fileNesting.enabled": true,
 }

@@ -32,4 +32,6 @@
   "tslint.packageManager": "yarn",
   "tslint.alwaysShowRuleFailuresAsWarnings": false,
   "explorer.fileNesting.enabled": true,
+  "git.mergeEditor": true,
+  "terminal.integrated.shellIntegration.enabled": true,
 }

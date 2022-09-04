@@ -27,10 +27,13 @@ rescue StandardError => e
   warn(e)
 end
 
-MODS.each do |mod|
-  next unless mod[:branch]
+def checkout_main
+  MODS.each do |mod|
+    next unless mod[:branch]
 
-  act(mod, "git checkout #{mod[:branch]}")
+    act(mod, "git checkout #{mod[:branch]}")
+  end
 end
 
+checkout_main
 # TODO: Dependency order to execute things like tsc

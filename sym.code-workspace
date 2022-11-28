@@ -1,0 +1,69 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "elephant",
+			"path": "packages/elephant"
+		},
+		{
+			"name": "proon",
+			"path": "packages/proon"
+		},
+		{
+			"name": "toed",
+			"path": "packages/toed"
+		},
+		{
+			"name": "memo",
+			"path": "packages/memo"
+		},
+		{
+			"name": "discojs",
+			"path": "packages/discojs"
+		},
+		{
+			"name": "perl",
+			"path": "packages/perl"
+		},
+		{
+			"name": "spelling-sea",
+			"path": "packages/spelling-sea"
+		},
+		{
+			"name": "jsonpath",
+			"path": "packages/jsonpath"
+		},
+		{
+			"name": "testbed",
+			"path": "packages/testbed"
+		},
+		{
+			"name": "asset",
+			"path": "packages/asset"
+		}
+	],
+	"settings": {
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"js/ts.implicitProjectConfig.experimentalDecorators": true,
+		"js/ts.implicitProjectConfig.checkJs": true,
+		"testing.autoRun.mode": "rerun",
+		"ruby.useLanguageServer": true,
+		"ruby.codeCompletion": "rcodetools",
+		"ruby.intellisense": "rubyLocate",
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"autoimport.doubleQuotes": true,
+		"tslint.packageManager": "yarn",
+		"tslint.alwaysShowRuleFailuresAsWarnings": false,
+		"jest.disabledWorkspaceFolders": [
+			"elephant",
+			"proon",
+			"toed",
+			"memo",
+			"spelling-sea",
+			"jsonpath",
+			"testbed"
+		]
+	}
+}

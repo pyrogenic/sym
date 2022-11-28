@@ -10,6 +10,8 @@
     "proon": "yarn workspace @pyrogenic/proon",
     "spelling-sea": "yarn workspace @pyrogenic/spelling-sea",
     "testbed": "yarn workspace @pyrogenic/testbed",
+    "-test": "npm-run-all --parallel 'asset test'",
+    "-test-watch": "npm-run-all --parallel 'asset test --watchAll'",
     "toed": "yarn workspace @pyrogenic/toed",
     "start": "npm-run-all --parallel 'asset watch' 'memo watch' 'perl watch'"
   },

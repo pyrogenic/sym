@@ -13,6 +13,7 @@
   ],
   "explorer.fileNesting.enabled": true,
   "git.detectSubmodulesLimit": 100,
+  "git.detectSubmodules": true,
   "git.mergeEditor": true,
   "jest.jestCommandLine": "yarn jest",
   "js/ts.implicitProjectConfig.checkJs": true,

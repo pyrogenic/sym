@@ -28,6 +28,18 @@
 			"path": "packages/perl"
 		},
 		{
+			"name": "scooch",
+			"path": "packages/scooch"
+		},
+		{
+			"name": "slide-grid",
+			"path": "packages/slide-grid"
+		},
+		{
+			"name": "slide-grid-demo",
+			"path": "packages/slide-grid-demo"
+		},
+		{
 			"name": "spelling-sea",
 			"path": "packages/spelling-sea"
 		},

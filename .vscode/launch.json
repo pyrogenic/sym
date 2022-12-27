@@ -4,7 +4,7 @@
       "name": "Attach to Chrome",
       "port": 9222,
       "request": "attach",
-      "type": "pwa-chrome",
+      "type": "chrome",
       "webRoot": "${workspaceFolder}"
     },
     {
@@ -23,8 +23,12 @@
         "disableOptimisticBPs": true,
       },
       {
-            "type": "pwa-chrome",
+            "type": "chrome",
             "name": "Elephant (3000)",
+            "outFiles": [
+              "${workspaceFolder}/**/*.js",
+              "!**/node_modules/**"
+            ],
             "request": "launch",
             "url": "http://localhost:3000/elephant"
         },

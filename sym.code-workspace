@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"name": "sym",
+			"path": "."
+		},
+		{
+			"path": "./packages/asset"
+		},
+		{
+			"path": "./packages/discojs"
+		},
+		{
+			"path": "./packages/perl"
+		},
+		{
+			"path": "./packages/toed"
+		}
+	],
+	"settings": {
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"jest.showCoverageOnLoad": true,
+		"js/ts.implicitProjectConfig.experimentalDecorators": true,
+		"js/ts.implicitProjectConfig.checkJs": true,
+		"testing.autoRun.mode": "rerun",
+		"ruby.useLanguageServer": true,
+		"ruby.codeCompletion": "rcodetools",
+		"ruby.intellisense": "rubyLocate",
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"autoimport.doubleQuotes": true,
+		"tslint.packageManager": "yarn",
+		"tslint.alwaysShowRuleFailuresAsWarnings": false,
+		"git.mergeEditor": true,
+		"terminal.integrated.shellIntegration.enabled": true,
+		"jest.disabledWorkspaceFolders": [
+			"toed"
+		]
+	}
+}

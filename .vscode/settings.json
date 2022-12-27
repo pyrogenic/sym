@@ -17,7 +17,7 @@
     "javascript",
     "typescript"
   ],
-  "jest.jestCommandLine": "yarn jest",
+  "jest.autoRun": "false",
   "testing.autoRun.mode": "rerun",
   "ruby.useLanguageServer": true,
   "ruby.codeCompletion": "rcodetools",

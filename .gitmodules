@@ -41,3 +41,12 @@
 [submodule "packages/proon"]
 	path = packages/proon
 	url = git@github.com:pyrogenic/proon.git
+[submodule "packages/slide-grid"]
+	path = packages/slide-grid
+	url = git@github.com:pyrogenic/slide-grid.git
+[submodule "packages/slide-grid-demo"]
+	path = packages/slide-grid-demo
+	url = git@github.com:pyrogenic/slide-grid-demo.git
+[submodule "packages/scooch"]
+	path = packages/scooch
+	url = git@github.com:pyrogenic/scooch.git

@@ -1,37 +1,40 @@
 {
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "js/ts.implicitProjectConfig.experimentalDecorators": true,
-  "js/ts.implicitProjectConfig.checkJs": true,
-  "eslint.format.enable": true,
-  "eslint.codeActionsOnSave.mode": "all",
-  "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modifications",
+  "autoimport.doubleQuotes": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.format.enable": true,
   "eslint.validate": [
     "javascript",
     "typescript"
   ],
+  "explorer.fileNesting.enabled": true,
+  "git.detectSubmodules": true,
+  "git.detectSubmodulesLimit": 100,
+  "git.mergeEditor": true,
   "jest.autoRun": "false",
-  "testing.autoRun.mode": "rerun",
-  "ruby.useLanguageServer": true,
+  "jest.jestCommandLine": "yarn jest",
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
   "ruby.codeCompletion": "rcodetools",
   "ruby.format": "rubocop",
   "ruby.intellisense": "rubyLocate",
   "ruby.lint": {
-    "rubocop": true,
+    "rubocop": true
   },
   "ruby.useBundler": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "autoimport.doubleQuotes": true,
-  "tslint.packageManager": "yarn",
-  "tslint.alwaysShowRuleFailuresAsWarnings": false,
-  "explorer.fileNesting.enabled": true,
-  "git.mergeEditor": true,
+  "ruby.useLanguageServer": true,
+  "search.exclude": {
+    "**/.pnp.*": true,
+    "**/.yarn": true
+  },
   "terminal.integrated.shellIntegration.enabled": true,
+  "testing.autoRun.mode": "rerun",
+  "tslint.alwaysShowRuleFailuresAsWarnings": false,
+  "tslint.packageManager": "yarn",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

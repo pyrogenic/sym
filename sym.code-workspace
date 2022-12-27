@@ -1,25 +1,63 @@
 {
 	"folders": [
 		{
-			"name": "sym",
 			"path": "."
 		},
 		{
-			"path": "./packages/asset"
+			"name": "elephant",
+			"path": "packages/elephant"
 		},
 		{
-			"path": "./packages/discojs"
+			"name": "proon",
+			"path": "packages/proon"
 		},
 		{
-			"path": "./packages/perl"
+			"name": "toed",
+			"path": "packages/toed"
 		},
 		{
-			"path": "./packages/toed"
+			"name": "memo",
+			"path": "packages/memo"
+		},
+		{
+			"name": "discojs",
+			"path": "packages/discojs"
+		},
+		{
+			"name": "perl",
+			"path": "packages/perl"
+		},
+		{
+			"name": "scooch",
+			"path": "packages/scooch"
+		},
+		{
+			"name": "slide-grid",
+			"path": "packages/slide-grid"
+		},
+		{
+			"name": "slide-grid-demo",
+			"path": "packages/slide-grid-demo"
+		},
+		{
+			"name": "spelling-sea",
+			"path": "packages/spelling-sea"
+		},
+		{
+			"name": "jsonpath",
+			"path": "packages/jsonpath"
+		},
+		{
+			"name": "testbed",
+			"path": "packages/testbed"
+		},
+		{
+			"name": "asset",
+			"path": "packages/asset"
 		}
 	],
 	"settings": {
 		"typescript.enablePromptUseWorkspaceTsdk": true,
-		"jest.showCoverageOnLoad": true,
 		"js/ts.implicitProjectConfig.experimentalDecorators": true,
 		"js/ts.implicitProjectConfig.checkJs": true,
 		"testing.autoRun.mode": "rerun",
@@ -33,7 +71,13 @@
 		"git.mergeEditor": true,
 		"terminal.integrated.shellIntegration.enabled": true,
 		"jest.disabledWorkspaceFolders": [
-			"toed"
+			"elephant",
+			"proon",
+			"toed",
+			"memo",
+			"spelling-sea",
+			"jsonpath",
+			"testbed"
 		]
 	}
 }

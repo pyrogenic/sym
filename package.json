@@ -8,10 +8,13 @@
     "memo": "yarn workspace @pyrogenic/memo",
     "perl": "yarn workspace @pyrogenic/perl",
     "proon": "yarn workspace @pyrogenic/proon",
+    "slide-grid": "yarn workspace @pyrogenic/slide-grid",
     "spelling-sea": "yarn workspace @pyrogenic/spelling-sea",
     "testbed": "yarn workspace @pyrogenic/testbed",
+    "-test": "npm-run-all --parallel 'asset test'",
+    "-test-watch": "npm-run-all --parallel 'asset test --watchAll'",
     "toed": "yarn workspace @pyrogenic/toed",
-    "start": "npm-run-all --parallel 'asset watch' 'memo watch' 'perl watch'"
+    "start": "npm-run-all --parallel 'asset watch' 'memo watch' 'perl watch' 'slide-grid watch'"
   },
   "dependencies": {
     "npm-run-all": "~4.1.5"
@@ -23,8 +26,12 @@
     "**/babel-jest": "^26.6.0",
     "**/bootstrap": "^5",
     "**/jest": "26.6.0",
+    "**/loader-utils": "^1.4.2",
+    "**/lodash": "^4.17.12",
+    "**/minimist": "^1.2.6",
     "**/react-bootstrap": "^2.1",
     "**/react": "~17",
+    "**/shell-quote": "^1.7.3",
     "**/typescript": "~4.6.4"
   },
   "workspaces": [

@@ -1,18 +1,23 @@
+# frozen_string_literal: true
+
 require 'rainbow/refinement'
 using Rainbow
 
-mods = []
-mod = nil
-File.readlines('.gitmodules').each do |line|
-  case line
-  when /\[submodule "([^"]+)"\]/
-    mods << mod if mod
-    mod = { name: Regexp.last_match(1) }
-  when /(\w+) = (.*)/
-    mod[Regexp.last_match(1).to_sym] = Regexp.last_match(2)
+def parse_modules
+  mods = []
+  mod = nil
+  File.readlines('.gitmodules').each do |line|
+    case line
+    when /\[submodule "([^"]+)"\]/
+      mods << mod if mod
+      mod = { name: Regexp.last_match(1) }
+    when /(\w+) = (.*)/
+      mod[Regexp.last_match(1).to_sym] = Regexp.last_match(2)
+    end
   end
+  mods << mod if mod
+  mods
 end
-mods << mod if mod
 
 def act(mod, cmd)
   Dir.chdir(mod[:path]) do
@@ -25,11 +30,13 @@ rescue StandardError => e
   warn(e)
 end
 
+mods = parse_modules
 mods.each do |mod|
   unless mod[:branch]
     puts("[#{mod[:name].red}] No branch defined!")
     next
   end
 
-  act(mod, "git checkout #{mod[:branch]}")
+  r = act(mod, "git checkout #{mod[:branch]}")
+  act(mod, 'git pull') if r&.include?('can be fast-forwarded')
 end

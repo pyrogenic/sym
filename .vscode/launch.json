@@ -1,5 +1,5 @@
 {
-    "configurations": [
+  "configurations": [
     {
       "name": "Attach to Chrome",
       "port": 9222,
@@ -8,52 +8,72 @@
       "webRoot": "${workspaceFolder}"
     },
     {
-        "type": "node",
-        "name": "vscode-jest-tests",
-        "request": "launch",
-        "runtimeExecutable": "/opt/homebrew/bin/yarn",
-        "args": [
-          "test",
-          "--runInBand",
-          "--watchAll=false"
-        ],
-        "cwd": "${fileDirname}",
-        "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen",
-        "disableOptimisticBPs": true,
-      },
-      {
-            "type": "chrome",
-            "name": "Elephant (3000)",
-            "outFiles": [
-              "${workspaceFolder}/**/*.js",
-              "!**/node_modules/**"
-            ],
-            "request": "launch",
-            "url": "http://localhost:3000/elephant"
-        },
-        {
-            "type": "node",
-            "name": "Test All",
-            "request": "launch",
-            "console": "internalConsole",
-            "internalConsoleOptions": "neverOpen",
-            "disableOptimisticBPs": true,
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "/opt/homebrew/bin/yarn",
-            "args": [
-                "jest",
-                "--watch",
-            ]
-        },
-        {
-          "type": "node",
-          "name": "Test Shell",
-          "request": "launch",
-          "console": "integratedTerminal",
-          "disableOptimisticBPs": true,
-          "cwd": "${fileDirname}",
-          "runtimeExecutable": "zsh"
-      }
-    ]
+      "type": "node",
+      "name": "vscode-jest-tests",
+      "request": "launch",
+      "runtimeExecutable": "/opt/homebrew/bin/yarn",
+      "args": [
+        "test",
+        "--runInBand",
+        "--watchAll=false"
+      ],
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+    },
+    {
+      "type": "chrome",
+      "name": "Elephant (3000)",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ],
+      "request": "launch",
+      "url": "http://localhost:3000/elephant"
+    },
+    {
+      "type": "chrome",
+      "name": "Generic (3000)",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ],
+      "request": "launch",
+      "url": "http://localhost:3000"
+    },
+    {
+      "type": "chrome",
+      "name": "Generic (3001)",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ],
+      "request": "launch",
+      "url": "http://localhost:3001"
+    },
+    {
+      "type": "node",
+      "name": "Test All",
+      "request": "launch",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "/opt/homebrew/bin/yarn",
+      "args": [
+        "jest",
+        "--watch",
+      ]
+    },
+    {
+      "type": "node",
+      "name": "Test Shell",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "disableOptimisticBPs": true,
+      "cwd": "${fileDirname}",
+      "runtimeExecutable": "zsh"
+    }
+  ]
 }

@@ -8,6 +8,7 @@
     "memo": "yarn workspace @pyrogenic/memo",
     "perl": "yarn workspace @pyrogenic/perl",
     "proon": "yarn workspace @pyrogenic/proon",
+    "scooch": "yarn workspace @pyrogenic/scooch",
     "slide-grid": "yarn workspace @pyrogenic/slide-grid",
     "slide-grid-demo": "yarn workspace @pyrogenic/slide-grid-demo",
     "spelling-sea": "yarn workspace @pyrogenic/spelling-sea",

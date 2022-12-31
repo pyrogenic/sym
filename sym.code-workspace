@@ -78,6 +78,13 @@
 			"spelling-sea",
 			"jsonpath",
 			"testbed"
-		]
+		],
+		"scm.alwaysShowRepositories": true,
+		"scm.defaultViewMode": "tree",
+		"scm.repositories.sortOrder": "path",
+		"scm.repositories.visible": 100,
+		"git.autofetch": true,
+		"git.detectSubmodulesLimit": 100,
+		"git.enableSmartCommit": true
 	}
 }

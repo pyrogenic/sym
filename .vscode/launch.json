@@ -62,7 +62,7 @@
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "/opt/homebrew/bin/yarn",
       "args": [
-        "jest",
+        "test",
         "--watch",
       ]
     },

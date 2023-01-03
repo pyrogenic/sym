@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# TODO: Dependency order to execute things like tsc
+# TODO: do `git submodule update --init --recursive`
+
 require 'rainbow/refinement'
 using Rainbow
 
@@ -30,7 +33,7 @@ rescue StandardError => e
   warn(e)
 end
 
-def checkout_main
+def checkout_main(mods)
   mods.each do |mod|
     unless mod[:branch]
       puts("[#{mod[:name].red}] No branch defined!")
@@ -40,5 +43,7 @@ def checkout_main
   end
 end
 
-checkout_main
-# TODO: Dependency order to execute things like tsc
+if __FILE__ == $PROGRAM_NAME
+  mods = parse_modules
+  checkout_main(mods)
+end

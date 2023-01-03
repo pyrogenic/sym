@@ -12,6 +12,8 @@ Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 Layout/MultilineMethodDefinitionBraceLayout:
   Enabled: false
+Layout/EndOfLine:
+  Enabled: false
 
 Metrics:
   Severity: refactor

@@ -1,0 +1,13 @@
+diff --git a/node_modules/webpack/lib/config/defaults.js b/node_modules/webpack/lib/config/defaults.js
+index 81fca07..878dafc 100644
+--- a/node_modules/webpack/lib/config/defaults.js
++++ b/node_modules/webpack/lib/config/defaults.js
+@@ -521,7 +521,7 @@ const applyModuleDefaults = (
+ 			resolve: {
+ 				byDependency: {
+ 					esm: {
+-						fullySpecified: true
++						fullySpecified: false
+ 					}
+ 				}
+ 			}

@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-MODS = begin
+require 'rainbow/refinement'
+using Rainbow
+
+def parse_modules
   mods = []
   mod = nil
   File.readlines('.gitmodules').each do |line|
@@ -18,9 +21,9 @@ end
 
 def act(mod, cmd)
   Dir.chdir(mod[:path]) do
-    puts("[#{mod[:name]}] $ #{cmd}")
+    puts("[#{mod[:name].green}] #{'$'.faint} #{cmd}")
     r = `#{cmd}`
-    puts(r)
+    puts(r.faint)
     r
   end
 rescue StandardError => e
@@ -28,9 +31,11 @@ rescue StandardError => e
 end
 
 def checkout_main
-  MODS.each do |mod|
-    next unless mod[:branch]
-
+  mods.each do |mod|
+    unless mod[:branch]
+      puts("[#{mod[:name].red}] No branch defined!")
+      next
+    end
     act(mod, "git checkout #{mod[:branch]}")
   end
 end

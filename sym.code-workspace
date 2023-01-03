@@ -64,7 +64,7 @@
 		"ruby.useLanguageServer": true,
 		"ruby.codeCompletion": "rcodetools",
 		"ruby.intellisense": "rubyLocate",
-		"typescript.tsdk": "node_modules/typescript/lib",
+		"typescript.tsdk": "sym/node_modules/typescript/lib",
 		"autoimport.doubleQuotes": true,
 		"tslint.packageManager": "yarn",
 		"tslint.alwaysShowRuleFailuresAsWarnings": false,

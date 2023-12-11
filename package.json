@@ -30,7 +30,7 @@
     "**/debug": "^2.6.9",
     "**/decode-uri-component": "^0.2.2",
     "**/express": "^4.17.3",
-    "**/jest": "26.6.0",
+    "**/jest": "27.4.3",
     "**/loader-utils": "^1.4.2",
     "**/lodash": "^4.17.12",
     "**/minimist": "^1.2.6",

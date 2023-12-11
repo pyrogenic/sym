@@ -5,6 +5,7 @@
 
 # testing
 /coverage
+/packages/discojs/src/coverage
 
 # production
 /build

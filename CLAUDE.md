@@ -90,9 +90,23 @@ can't happen — every package resolves the hoisted **webpack 5.75.0**, CRA 4 on
 
 ## Submodules
 
-Submodules normally sit at a **detached HEAD** pinned by the superproject — that's expected, not
-breakage. `.gitmodules` records which branch each tracks. Commit inside the submodule first, then
-commit the moved pointer in `sym`.
+The superproject pins each submodule to a **commit SHA**, not a branch. `git submodule update`
+checks that SHA out directly, which leaves the submodule on a **detached HEAD** — so a fresh clone,
+or anything that runs `submodule update` (including some IDEs, on pull), shows a hash rather than a
+branch name. That's the mechanism, not breakage.
+
+**But you have to leave that state before you can work.** Commits on a detached HEAD belong to no
+branch and are easy to lose. So in any package you're actually changing, check out its branch first:
+
+```sh
+cd packages/elephant && git checkout main    # or `sym`, for discojs
+```
+
+`.gitmodules` records which branch each tracks, but nothing consults it during a normal checkout —
+only `git submodule update --remote` does. Leaving the dormant packages detached is fine and
+intended; it's only the ones you're editing that need attaching.
+
+Then: commit inside the submodule, and commit the moved pointer in `sym`.
 
 **Push the submodule before committing its pointer.** A pointer to an unpushed commit makes
 `git submodule update` fail on every other machine.

@@ -4,21 +4,32 @@ A "synthetic monorepo": separate GitHub repos joined by **git submodules** + **y
 Each `packages/*` is its own repository with its own history, remotes and release cadence. See
 `README.md` for the pitch; this file is the operational detail.
 
-## Node version — read this first
+## Node version
 
-**The build only works on Node 18–21.** This is the single most likely thing to waste your time.
+**Only the `discojs` build is fussy: it needs Node 18–21.** Everything else runs on current
+Node, so the root `.nvmrc` says `lts/*` and `packages/discojs/.nvmrc` says `20`.
 
-| Node | result |
-|------|--------|
+| Node | `discojs` build |
+|------|------|
 | 16   | ✗ `rollup` 4 requires `>=18` |
-| 18   | ✓ builds (blocked by `engines`, see below) |
-| 20   | ✓ builds — **this is what `.nvmrc` pins** |
+| 18   | ✓ (blocked by `engines`, see below) |
+| 20   | ✓ — what `packages/discojs/.nvmrc` pins |
 | 22+  | ✗ `browserslist-generator` (via `rollup-plugin-ts`) uses the `assert { type: 'json' }` import syntax removed in Node 22 |
 
-Only `packages/discojs` actually cares — everything else is fine on modern Node — but
-`yarn discojs build` runs from the repo root, so it's the **root's** Node that governs the build,
-not `packages/discojs/.nvmrc`. That's why root `.nvmrc` says `20` and not `lts/*`: `lts/*` now
-resolves past the ceiling.
+**So build it from inside the submodule**, where fnm reads that `.nvmrc` and switches for you:
+
+```sh
+cd packages/discojs && yarn build
+```
+
+`yarn discojs build` from the repo root works too, but only if the root shell happens to be on
+18–21 — otherwise it fails with a bare `SyntaxError: Unexpected identifier 'assert'`, which does
+not point at the Node version at all.
+
+Measured, so it doesn't get re-litigated: on Node 26, `elephant` typechecks and builds clean, and
+the `preinstall` builds for `asset`, `memo` and `perl` all succeed. Only `discojs` fails. The root
+was pinned to 20 for a while, which dragged every package down to it for one submodule's sake —
+and is why wrangler (Node >= 22) could not run in-tree.
 
 `discojs/package.json` declares `engines: { node: ">=20.0.0" }`, and **yarn 1 treats that as a hard
 error**. Node 18 builds byte-identically in practice, so on an 18-only machine use:
@@ -36,7 +47,7 @@ was last `nvm use`d, and it persists globally.
 ```sh
 git submodule update --init --recursive
 yarn                      # root install; hoists across all workspaces
-yarn discojs build        # REQUIRED before Elephant will run — see below
+(cd packages/discojs && yarn build)   # REQUIRED before Elephant will run — see below
 yarn elephant start        # dev server on :3000/elephant
 ```
 
@@ -72,8 +83,10 @@ still on **react-scripts 4.0.3**, which can't take TS 5 (its `eslint-config-reac
 `@typescript-eslint@^4` — the other root resolution). `elephant` and `scooch` are on
 react-scripts 5.0.1. Any TS modernisation has to deal with CRA 4 first.
 
-react-scripts 4 also breaks on Node 17+ (`ERR_OSSL_EVP_UNSUPPORTED`, webpack 4 + OpenSSL 3), and
-none of those packages carry an `--openssl-legacy-provider` workaround.
+Those three don't build at all right now, on any Node version, and it isn't a Node problem:
+react-scripts 4's preflight check rejects the hoisted `babel-loader` 8.3.0 because it wants exactly
+8.1.0. (An earlier note here blamed `ERR_OSSL_EVP_UNSUPPORTED` from webpack 4 on Node 17+. That
+can't happen — every package resolves the hoisted **webpack 5.75.0**, CRA 4 ones included.)
 
 ## Submodules
 

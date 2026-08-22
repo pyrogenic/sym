@@ -9,8 +9,14 @@ The **SY**nthetic **M**onorepo for my React/TypeScript projects. Rather than a t
 - `yarn`
 
 To run Elephant, build `discojs` first, then start Elephant:
-- `yarn discojs build`
+- `cd packages/discojs && yarn build && cd ../..`
 - `yarn elephant start` (on Windows, `yarn elephant start-rs`)
+
+Build `discojs` from inside its own directory: its build is the one thing in the repo that
+needs Node 18–21, and `packages/discojs/.nvmrc` pins 20 so fnm switches for you on `cd`.
+Everything else runs on current Node, which is why the root `.nvmrc` is `lts/*`.
+
+### Why `discojs` needs building by hand
 
 `discojs` is the only package you have to build yourself. Every other one either commits
 its build output (`slide-grid`, `proon`) or rebuilds itself during `yarn` via a

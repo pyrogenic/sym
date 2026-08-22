@@ -8,6 +8,15 @@ The **SY**nthetic **M**onorepo for my React/TypeScript projects. Rather than a t
 - `git submodule update --init --recursive`
 - `yarn`
 
-To run Elephant, for some reason you need to build `discojs` manually, then you can start Elephant:
+To run Elephant, build `discojs` first, then start Elephant:
 - `yarn discojs build`
-- `yarn elephant start`
+- `yarn elephant start` (on Windows, `yarn elephant start-rs`)
+
+`discojs` needs building by hand because `node_modules/discojs` is a symlink to
+`packages/discojs`, whose `package.json` points `main`/`module`/`types` at `dist/` — and
+`dist/` is gitignored. A fresh clone therefore has the source but no build artifact, so
+Elephant can't resolve the package until you've built it. The same applies after any
+change to `discojs`: rebuild, or Elephant keeps using the old `dist/`.
+
+Note the build only works on **Node 18–21**, which is why the root `.nvmrc` pins 20 rather
+than `lts/*`. See [CLAUDE.md](CLAUDE.md) for that and the other sharp edges.

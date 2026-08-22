@@ -96,15 +96,28 @@ or anything that runs `submodule update` (including some IDEs, on pull), shows a
 branch name. That's the mechanism, not breakage.
 
 **But you have to leave that state before you can work.** Commits on a detached HEAD belong to no
-branch and are easy to lose. So in any package you're actually changing, check out its branch first:
+branch and are easy to lose. `.gitmodules` records the branch each submodule tracks, but nothing
+consults it during a normal checkout — only `git submodule update --remote` does — so reattaching
+is a manual step.
+
+`src/modulator.rb` exists for exactly this. It reads `.gitmodules` and checks every submodule out
+to its declared branch, warning about any that declares none:
+
+```sh
+ruby src/modulator.rb
+```
+
+(Needs the `rainbow` gem — `bundle install` first. There is also `src/testify.rb`.)
+
+Or by hand, for a single package:
 
 ```sh
 cd packages/elephant && git checkout main    # or `sym`, for discojs
 ```
 
-`.gitmodules` records which branch each tracks, but nothing consults it during a normal checkout —
-only `git submodule update --remote` does. Leaving the dormant packages detached is fine and
-intended; it's only the ones you're editing that need attaching.
+Reattaching only moves a submodule to its branch **tip**, which is not necessarily the pinned
+commit. Today every pin equals its tip, so `modulator.rb` is a no-op beyond reattaching — but if
+one has drifted, running it will move that submodule and show up as a pointer change in `sym`.
 
 Then: commit inside the submodule, and commit the moved pointer in `sym`.
 
